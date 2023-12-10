@@ -2,6 +2,7 @@ module seq_det_test;
   reg x, clk, rst;
   wire z;
 
+  // Instantiate the sequence detector module
   sequencedetector d1(
     .x(x),
     .clk(clk),
@@ -9,14 +10,17 @@ module seq_det_test;
     .z(z)
   );
 
+  // Initial block to set initial values
   initial begin
     clk = 0;
     rst = 1;
     x = 0;
   end
 
+  // Clock generation
   always #5 clk = ~clk;
 
+  // Display information in simulation
   initial begin
     $monitor(
       "time=%0d",
@@ -36,6 +40,7 @@ module seq_det_test;
     );
   end
 
+  // Test stimulus
   initial begin
     #5 rst = 0;
     #10; x = 1;
