@@ -29,4 +29,4 @@ Depending on how the outputs are determined, we have two types of machines:
 4. **Sequence Detector:**
    - Utilizes FSMs for detecting specific patterns or sequences in data streams, applicable in digital communication and error detection.
 
-
+hi
